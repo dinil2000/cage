@@ -1,0 +1,69 @@
+<div class="container mt-4">
+  <h2>Contact Us</h2>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="name" 
+            name="name"
+            [(ngModel)]="formData.name"
+            required
+            #name="ngModel">
+          <div class="alert alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+            Name is required
+          </div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input 
+            type="email" 
+            class="form-control" 
+            id="email" 
+            name="email"
+            [(ngModel)]="formData.email"
+            required
+            email
+            #email="ngModel">
+          <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+            Valid email is required
+          </div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea 
+            class="form-control" 
+            id="message" 
+            name="message"
+            rows="4" 
+            [(ngModel)]="formData.message"
+            required
+            #message="ngModel"></textarea>
+          <div class="alert alert-danger" *ngIf="message.invalid && (message.dirty || message.touched)">
+            Message is required
+          </div>
+        </div>
+        
+        <button 
+          type="submit" 
+          class="btn btn-primary"
+          [disabled]="contactForm.invalid">
+          Send Message
+        </button>
+      </form>
+    </div>
+    
+    <div class="col-md-6">
+      <h4>Our Location</h4>
+      <p>123 Breeding Street</p>
+      <p>Animal City, AC 12345</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Email: infocagebreedingbox.com</p>
+    </div>
+  </div>
+</div>
