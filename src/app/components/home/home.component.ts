@@ -16,7 +16,7 @@ export class HomeComponent {
   breedingBoxes: BreedingBox[] = BREEDING_BOXES;
   
   // Replace with your actual WhatsApp business number
-  private adminWhatsApp = '7012027492';
+  private adminWhatsApp = '9746880258';
 
   contactViaWhatsApp(box: BreedingBox) {
     const message = encodeURIComponent(

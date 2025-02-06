@@ -1,2 +1,38 @@
-/* src/styles.css */
+/* Import Bootstrap */
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Light Mode (Default) */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark Mode Navbar */
+body.dark-mode .navbar {
+  background-color: #222 !important;
+}
+
+/* Dark Mode Header */
+body.dark-mode header {
+  background-color: #343a40 !important;
+}
+
+/* Dark Mode Cards */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+/* Dark Mode Buttons */
+body.dark-mode .btn {
+  background-color: #333;
+  color: white;
+  border: 1px solid white;
+}

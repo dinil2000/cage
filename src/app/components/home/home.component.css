@@ -1,18 +1,86 @@
 .card {
-    transition: transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
+  transition: transform 0.2s;
+  height: 100%;
+}
 
-  .specs-section {
-    font-size: 0.9rem;
-  }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-  .price-section {
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
+.card-img-container {
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.card-img-top {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.specs-section {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.specs-section h6 {
+  margin-bottom: 0.5rem;
+}
+
+.specs-section li {
+  margin-bottom: 0.25rem;
+}
+
+.price-section {
+  text-align: center;
+}
+
+.btn-success {
+  padding: 0.75rem;
+  font-weight: 500;
+}
+
+.bi-whatsapp {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .card-img-container {
+    height: 200px; /* Reduce height for smaller screens */
   }
+}
+
+.card-img-container {
+  height: 250px; /* Adjust this value as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.card-img-top {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 1rem;
+}
