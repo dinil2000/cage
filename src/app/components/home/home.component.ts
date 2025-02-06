@@ -19,13 +19,17 @@ export class HomeComponent {
   private adminWhatsApp = '9746880258';
 
   contactViaWhatsApp(box: BreedingBox) {
+    const priceInINR = new Intl.NumberFormat('en-IN', { 
+      style: 'currency', 
+      currency: 'INR' 
+    }).format(box.price);
     const message = encodeURIComponent(
       `Hi! I'm interested in the ${box.name}.\n\n` +
       `Specifications:\n` +
       `- Size: ${box.specifications.size}\n` +
       `- Material: ${box.specifications.material}\n` +
       `- Capacity: ${box.specifications.capacity}\n\n` +
-      `Price: $${box.price.toFixed(2)}\n\n` +
+      `Price: ${priceInINR}\n\n` +
       `Please provide more information.`
     );
     
