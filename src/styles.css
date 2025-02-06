@@ -57,12 +57,3 @@ body.dark-mode .btn {
   }
   /* parallel Background  currently not applied*/
 
-  .parallax-background {
-    background-image: url('/images/breeding-boxes/three.jpg');
-    background-size: cover;
-    background-attachment: fixed; /* Parallax Effect */
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh; /* Full screen */
-  }
-  
