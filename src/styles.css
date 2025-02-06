@@ -36,3 +36,33 @@ body.dark-mode .btn {
   color: white;
   border: 1px solid white;
 }
+
+
+/* Animated Background */
+@keyframes moveBackground {
+    from {
+      background-position: 0% 0%;
+    }
+    to {
+      background-position: 100% 100%;
+    }
+  }
+  
+  .animated-background {
+    background-image: url('/images/breeding-boxes/back.gif'); /* Replace with your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: moveBackground 10s linear infinite alternate;
+  }
+  /* parallel Background  currently not applied*/
+
+  .parallax-background {
+    background-image: url('/images/breeding-boxes/three.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Parallax Effect */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; /* Full screen */
+  }
+  
