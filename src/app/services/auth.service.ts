@@ -9,7 +9,8 @@ import { tap } from 'rxjs/operators';
 })
 export class AuthService {
 
-  private baseUrl = 'http://localhost:5000/api/admin';
+  private baseUrl = 'https://cage-api.onrender.com/api/admin';
+  
 
   // Track login state using BehaviorSubject
   private loggedIn = new BehaviorSubject<boolean>(this.isAuthenticated());

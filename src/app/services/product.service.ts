@@ -25,7 +25,7 @@ export interface Product {
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'http://localhost:5000/api/products';
+  private baseUrl = 'https://cage-api.onrender.com/api/products';
 
   constructor(
     private http: HttpClient,
