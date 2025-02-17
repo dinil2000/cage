@@ -1,0 +1,176 @@
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .login-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .login-header h2 {
+    color: #333;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .login-button:hover {
+    background-color: #357abd;
+  }
+  
+  .login-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  /* product-form.component.css */
+
+/* ... (previous CSS remains the same until the label styling) ... */
+
+/* Label styling with dark mode support */
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .min-h-screen {
+    background-color: #1f2937;
+  }
+
+  .form-container {
+    background-color: #111827;
+  }
+
+  label {
+    color: #f3f4f6;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #f3f4f6;
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  }
+
+  .price-input-container span {
+    color: #9ca3af;
+  }
+
+  .specifications-section {
+    border-top-color: #374151;
+  }
+
+  .specifications-section h3 {
+    color: #f3f4f6;
+  }
+
+  .file-upload-area {
+    border-color: #374151;
+    background-color: #1f2937;
+  }
+
+  .file-upload-area:hover {
+    border-color: #6366f1;
+  }
+
+  .file-upload-text {
+    color: #9ca3af;
+  }
+
+  .file-upload-link {
+    color: #6366f1;
+  }
+
+  .file-upload-hint {
+    color: #9ca3af;
+  }
+
+  .error-message {
+    color: #f87171;
+  }
+
+  .submit-button:disabled {
+    background-color: #4b5563;
+  }
+
+  /* Input placeholder color */
+  input::placeholder,
+  textarea::placeholder {
+    color: #6b7280;
+  }
+
+  /* Form validation styles for dark mode */
+  .ng-touched.ng-invalid {
+    border-color: #f87171;
+  }
+
+  .ng-touched.ng-invalid:focus {
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.2);
+  }
+}
+
+/* ... (rest of the previous CSS remains the same) ... */

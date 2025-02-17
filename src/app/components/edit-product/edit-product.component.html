@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Edit Product</h2>
+    <form (submit)="onUpdate()">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="product.name" name="name" required>
+  
+      <label>Description:</label>
+      <textarea [(ngModel)]="product.description" name="description" required></textarea>
+  
+      <label>Price:</label>
+      <input type="number" [(ngModel)]="product.price" name="price" required>
+  
+      <label>Size:</label>
+      <input type="text" [(ngModel)]="product.specifications.size" name="size">
+  
+      <label>Material:</label>
+      <input type="text" [(ngModel)]="product.specifications.material" name="material">
+  
+      <label>Capacity:</label>
+      <input type="text" [(ngModel)]="product.specifications.capacity" name="capacity">
+  
+      <button type="submit">Update Product</button>
+    </form>
+  </div>
+  

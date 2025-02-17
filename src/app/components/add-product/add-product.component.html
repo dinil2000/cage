@@ -1,0 +1,77 @@
+<div class="container">
+    <h2>Add New Product</h2>
+    <form (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <div>
+        <label>Product Name</label>
+        <input 
+          type="text" 
+          [(ngModel)]="product.name" 
+          name="name"
+          required
+        >
+      </div>
+    
+      <!-- Description -->
+      <div>
+        <label>Description</label>
+        <textarea 
+          [(ngModel)]="product.description" 
+          name="description"
+          required
+        ></textarea>
+      </div>
+    
+      <!-- Price -->
+      <div>
+        <label>Price</label>
+        <input 
+          type="number" 
+          [(ngModel)]="product.price" 
+          name="price"
+          required
+        >
+      </div>
+    
+      <!-- Specifications -->
+      <div>
+        <label>Size</label>
+        <input 
+          type="text" 
+          [(ngModel)]="product.specifications.size" 
+          name="size"
+        >
+      </div>
+    
+      <div>
+        <label>Material</label>
+        <input 
+          type="text" 
+          [(ngModel)]="product.specifications.material" 
+          name="material" 
+        >
+      </div>
+    
+      <div>
+        <label>Capacity</label>
+        <input 
+          type="text" 
+          [(ngModel)]="product.specifications.capacity" 
+          name="capacity"
+        >
+      </div>
+    
+      <!-- Image Upload -->
+      <div>
+        <label>Product Image</label>
+        <input 
+          type="file" 
+          (change)="onFileSelected($event)"
+          accept="image/*"
+        >
+      </div>
+    
+      <button type="submit">Add Product</button>
+    </form>
+  </div>
+  

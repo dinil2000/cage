@@ -1,32 +1,32 @@
 <div class="container mt-4">
-    <h1 class="mb-4">Available Breeding Boxes</h1>
-    
-    <div class="row g-4">
-      <div *ngFor="let box of breedingBoxes" class="col-md-4">
-        <div class="card h-100">
-          <div class="card-img-container">
-            <img [src]="box.image" class="card-img-top" [alt]="box.name">
+  <h1 class="mb-4">Available Breeding Boxes</h1>
+  
+  <div class="row g-4">
+    <div *ngFor="let product of products" class="col-md-4">
+      <div class="card h-100">
+        <div class="card-img-container">
+          <img [src]="'data:' + product.image?.contentType + ';base64,' + product.image?.data" class="card-img-top" [alt]="product.name">
+        </div>
+        
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <div class="specs-section mb-3">
+            <h6>Specifications:</h6>
+            <ul class="list-unstyled">
+              <li><strong>Size:</strong> {{ product.specifications.size }}</li>
+              <li><strong>Material:</strong> {{ product.specifications.material }}</li>
+              <li><strong>Capacity:</strong> {{ product.specifications.capacity }}</li>
+            </ul>
           </div>
-          
-          <div class="card-body">
-            <h5 class="card-title">{{box.name}}</h5>
-            <p class="card-text">{{box.description}}</p>
-            <div class="specs-section mb-3">
-              <h6>Specifications:</h6>
-              <ul class="list-unstyled">
-                <li><strong>Size:</strong> {{box.specifications.size}}</li>
-                <li><strong>Material:</strong> {{box.specifications.material}}</li>
-                <li><strong>Capacity:</strong> {{box.specifications.capacity}}</li>
-              </ul>
-            </div>
-            <div class="price-section mb-3">
-              <span class="h4 text-primary">{{ box.price | currency:'INR':'symbol' }}</span>
-            </div>
-            <button (click)="contactViaWhatsApp(box)" class="btn btn-success w-100">
-              <i class="bi bi-whatsapp me-2"></i>Contact via WhatsApp
-            </button>
+          <div class="price-section mb-3">
+            <span class="h4 text-primary">{{ product.price | currency:'INR':'symbol' }}</span>
           </div>
+          <button (click)="contactViaWhatsApp(product)" class="btn btn-success w-100">
+            <i class="bi bi-whatsapp me-2"></i>Contact via WhatsApp
+          </button>
         </div>
       </div>
     </div>
   </div>
+</div>

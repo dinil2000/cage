@@ -1,7 +1,13 @@
 import { Routes } from '@angular/router';
-
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { authGuard } from './guard/auth.guard';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
 export const routes: Routes = [
-    { path: '', loadComponent: () => import('./components/home/home.component').then(m => m.HomeComponent) },
-    { path: 'contact', loadComponent: () => import('./components/contact/contact.component').then(m => m.ContactComponent) },
-    { path: 'login', loadComponent: () => import('./components/login/login.component').then(m => m.LoginComponent) }
-  ];
+  { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent,  canActivate: [authGuard]  },
+  { path: 'add-product', component: AddProductComponent, canActivate: [authGuard] },
+  { path: 'edit-product/:id', component: EditProductComponent, canActivate: [authGuard] },
+  { path: '', loadComponent: () => import('./components/home/home.component').then(m => m.HomeComponent) },
+];
